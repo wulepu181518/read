@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>樊登读书会</title>
+	<style>
+	*{
+		padding:0;
+		margin:0;
+	}
+	a{
+		text-decoration:none;
+    } 
+    ul{
+    	list-style-type:none;
+    }
+    .container{
+    	width:1200px;
+    	margin:0 auto;
+    }
+	.header-top{
+		height:30px;
+		line-height:40px;
+		border-bottom:1px solid black;
+	}
+	.info{
+		font-size:10px;
+		float:right;
+	}
+	.info li{
+		float:left;
+		margin-left:10px;
+		margin-right:10px;
+		padding-bottom:2px;
+	}
+	.info a{
+		color:black;
+	}
+	.logo{
+		float:left;
+	}
+	.nav{
+		float:left;
+		font-weight:bold;
+		font-size:25px;
+	}
+	.nav a{
+		color:black;
+	}
+	.nav li{
+		float:left;
+		width:130px;
+		text-align:center;
+		border-right:1px solid black;
+		margin-top:10px;
+    }
+    .nav .last{
+
+    	border-right:none;
+    }
+	.header-bottom{
+		height:100px;
+	}
+	
+	.form{
+		float:left;
+	}
+	.search{
+		float:left;
+		width:150px;
+		height:40;
+		padding:10px;
+		border:2px solid #6495ED;
+		margin-top:15px;
+
+	}
+	.submit{
+		float:right;
+		width:40px;
+		height:40px;
+		background:#6495ED;
+		
+		margin-top:15px;
+	}
+	.login{
+    	float:left;
+    }
+
+    .peo{
+    	width:175px;
+		height:20;
+		padding:6px;
+		border:2px solid #6495ED;
+		margin-top:8px;
+		margin-left:25px;
+    float: left;
+    }
+    .enter-btn{
+    	font-size:10px;
+    	padding:10px;
+    	height:50px;
+    	width:60px;
+    	float:right;
+      background-color: #6495ED;
+    }
+	.banner{
+		height:400px;
+		position:relative;
+	}
+	.banner li{
+		width:100%;
+		height:400px;
+		position:absolute;
+		top:0;
+		left:0;
+	}
+	.banner1{
+		background: url(./image/banner1.png) no-repeat center center;
+	}
+	.banner2{
+		background: url(./image/banner2.png) no-repeat center center;
+	}
+	.prev,
+	.next{
+		width:100px;
+		height:100px;
+		top:150px;
+		left:11%;
+		position:absolute;
+	}
+	.next{
+		left:auto;
+		right:11%;
+	}
+	.reader{
+		border:5px dashed orange;
+		margin:20px;
+		padding:20px;
+		width:350px;
+		float:left;
+	}
+	.h1{
+		border-left:3px solid orange;
+		font-size:25px;
+		padding-left:20px;
+
+	}
+	.p{
+		font-size:15px;
+
+	}
+	.novel{
+		width:350px;
+	}
+	.p1{
+		width:350px;
+		border-bottom:1px solid grey;
+		padding-bottom:20px;
+	}
+	.picture{
+		float:right;
+		height:320px;
+		border:5px dashed orange;
+		margin-top:100px;
+		
+	}
+	.word{
+		font-size:20px;
+		font-weight:bold;
+		color:orange;
+	}
+    .picture1{
+        height:200px;
+        border:1px solid white;
+        margin-top:50px;
+        margin-left:300px;
+        float:left;
+    }
+    
+    .title{
+    	width:300px;
+    	margin-left:430px;
+    	
+    	text-align:center;
+    	padding-top:90px;
+    	height:150px;
+    	background:url(./image/border2.png)  no-repeat center;
+    	background-size:400px;
+    	
+    }
+    .title h2{
+    	font-size:40px;
+    	font-weight:bold;
+    	margin-top:10px;
+    	
+    }
+    .title .little{
+    	font-size:30px;
+    	padding-top:15px;
+    	
+    }
+    .book-big{
+    	float:left;
+    	margin-top:100px;
+    	
+    }
+    .book-small-1{
+    	float:left;
+    	border:2px solid #696969;
+    	margin-left:100px;
+    	margin-top:30px;
+    	padding:20px;
+    	
+    	
+    }
+    .book-small-2{
+        float:right;
+        border:2px solid #696969;
+        margin-right:150px;
+        margin-top:30px;
+    	padding:20px;
+
+    }
+    
+    .item{
+    	border:3px solid #A9A9A9;
+    	height:210;
+    	margin:8px;
+    	padding:5px;
+    }
+    .label{
+    	background-color:#A9A9A9;
+    	text-align:center;
+    	font-size:20px;
+    	font-weight:bold;
+    }
+    .bor-1{
+    	border-bottom:2px solid #A9A9A9;
+    	margin-bottom:5px;
+    }
+    .bor-2{
+    	border-top:2px solid white;
+    	margin-top:5px;
+    }
+    .bor-3{
+    	border-bottom:2px solid #A9A9A9;
+    	margin-bottom:9px;
+    }
+    .bor-4{
+    	border-top:2px solid white;
+    	margin-top:5px;
+    }
+    .b-t{
+
+    	width:100%;
+		height:400px;
+		width:1200px;
+    	background:url(./image/bg.png) no-repeat center;
+    	
+    }
+    .cor{
+    	text-align:center;
+    	font-size:40px;
+    	color:white;
+    	border-bottom:2px solid orange;
+    	width:200px;
+    	margin:0px 450px;
+    	padding:20px;
+    }
+    .par1{
+    	padding-left:350px;
+    	margin:30px;
+    }
+    .par2{
+    	padding-right:200px;
+    	margin:30px;
+    }
+    .inf{
+    	padding:0px;
+    	margin:0px;
+    	text-align:center;
+    	width:1200px;
+    	background-color:#303030;
+
+    }
+    .tel{
+
+    	
+    	color:white;
+    	font-size:20px;
+    }
+    
+
+    
+
+	
+
+	
+	</style>
+</head>
+<body>
+	<div class="header" >
+	  <div class="header-top">
+		<div class="container" clear>
+		  
+		  <ul class="info" clear>
+		  	<li><a href="#">登录/注册</a></li>
+		  	<li><a href="#">QQ登录</a></li>
+		  	<li><a href="#">微信登录</a></li>
+		  </ul>
+		</div>
+	  </div>
+	  <div class="header-bottom">
+         <div class="container" clear>
+            <img src="./image/logo.png"  width="170px" alt="logo图" class="logo"/>
+	      
+	        <ul class="nav" clear>
+	    	  <li class="first"><a href="#">首页</a></li>
+	    	  <li class="1"><a href="#">一书一课</a></li>
+	    	  <li class="2"><a href="#">公益活动</a></li>
+	    	  <li class="last"><a href="#">关于我们</a></li>
+	        </ul>
+	    
+	  
+	        <form class="form" clear >
+	         <input type="text" placeholder="作者/书籍/入会" class="search"/>
+	         <input type="button" class="submit"  value="搜"/>
+	        </form>
+	        <form class="login" clear>
+	          <div>
+                <input type="text" autocomplete="off"
+                       placeholder="用户名" name="userNameOrEmailAddress" required class="peo" /><br/>&nbsp;
+                       <button type="submit" class="enter-btn">登录</button>
+                <input type="password"
+                       autocomplete="off" placeholder="登录密码" name="password" required maxlength="32" class="peo" />
+              </div>
+            </form>
+
+	     </div>
+	  </div>
+    </div>
+	<div class="banner">
+	 
+	    <ul>
+	    	<li class="banner1"></li>
+	    	<li class="banner2"></li>
+	    </ul>
+	    <img src="./image/arrow1.png" alt="下一页" class="next" />
+	    <img src="./image/arrow2.png" alt="上一页" class="prev" />
+	  
+	</div> 
+	<br>
+	<br>
+	<hr color="orange">
+	<div class="all">
+	 <div clear>
+	  <div class="container" >
+	   <div class="reader" >
+	    
+	     <img src="./image/r.png" alt=" " class="read" align="center" />
+	     </br>
+	     </br>
+	     </br>
+	     
+	     <h class="h1">帮助三亿人养成阅读习惯</h>
+	     <p class="p1">樊登读书会是一个帮助国人养成阅读习惯的学习型社区，自2013年成立以来已经吸引了爱学习爱读书的人，为推动全民阅读这个共同目标而努力</p>
+	     <ul class="under">
+	     	<li class="a">
+	     		<img src="./image/目标.png" alt=" " class="图1"/>
+	     		<p class="word">目标</p>
+	     		<p class="novel">帮助那些没时间、没方向、效率低的人群提供每年50本书的精华内容</p>
+	     	</li>
+	     	<li class="b">
+	     	    <img src="./image/愿景.png" alt=" " class="图2"/>
+	     		<p class="word">愿景</p>
+	     		<p class="novel">帮助3亿人养成阅读习惯</p>
+	     	</li>
+	     	<li class="c">
+	     	    <img src="./image/使命.png" alt=" " class="图3"/>
+	     		<p class="word">使命</p>
+	     		<p class="novel">在中国，每多一个人读书，就多一份祥和</p>
+	     	</li>
+	     	
+	     </ul>
+	   
+
+	   </div>
+
+	  </div>
+	 </div>
+	</div>
+	<div class="图片">
+	  <div class="container" clear>
+	    <img src="./image/箭头1.png" alt=" " class="picture1">
+	    <img src="./image/图片.png" alt=" " class="picture">
+	    
+	  </div>
+	</div> 
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<hr color="#C0C0C0">
+	<div class="book" >
+	  <div class="container" clear>
+	  	<div class="title">
+	  	  <h2>往期精彩推荐
+	  	  
+	  	  	<p class="little">珍藏好书</p>
+	  	  </h2>
+	  	</div>
+	  	<div class="book-big">
+	  	    <img src="./image/book1.png" alt=" " width="400" height="600"/>
+	  	</div>
+	  	<div 
+	    <div class="book-small-1">
+	      <div class="bor-1">
+	        <img src="./image/book2.png" alt=" " width="200 height="300" />
+	        <div>
+	        	<p class="label" class="label.two">《皮囊》</p>
+	        </div>
+	      </div>
+	      <div class="bor-2">
+	        <img src="./image/book4.png" alt=" " width="200 height="300" />
+	        <div>
+	        	<p class="label">《文化苦旅》</p>
+	        </div>
+	      </div>
+	    </div>
+	    <div class="book-small-2">
+	      <div class="bor-3">
+	        <img src="./image/book3.png" alt=" " width="200 height="300" />
+	        <div>
+	        	<p class="label">《瓦尔登湖》</p>
+	        </div>
+	      </div>
+	      <div class="bor-4">
+	        <img src="./image/book5.png" alt=" " width="200 height="300" />
+	        <div>
+	        	<p class="label">《简爱》</p>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<hr color="brown">
+	<div class="container">
+	 <div class="b-t">
+	  
+	    <p class="cor">合作伙伴</p>
+	    <img src="./image/liantong.png" alt=" " class="par1" />
+	    <img src="./image/zhangyue.png" alt=" " class="par2" />
+	    <br>
+	    <img src="./image/FM.png" alt=" " class="par1" />
+	    <img src="./image/tengxun.png" alt=" " class="par2" />
+	    
+	 </div>
+	</div>
+	<div class="container">
+	  <div class="b-b">
+	    <div class="inf">
+	  	  <p class="tel">客服电话（微信同号） 133-3654-3874</p>
+	  	  <p class="tel">邮箱  814@szdushu.com</p>
+	  	  <p class="tel">联系地址:深圳市龙岗区布吉街道吉明大厦215</p>
+	  	</div>
+      </div>
+	</div>
+
+	
+
+
+</body>
+</html>
